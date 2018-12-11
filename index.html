@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head></head>
+  <body aurelia-app="app">
+    <script src="./aurelia.js"></script>
+    <script type="module">
+      import { ShellViewModel } from './shell.js';
+      new au.Aurelia()
+        .use
+          .standardConfiguration()
+          .developmentLogging()
+        .aurelia
+          .start()
+          .then(app => app.setRoot(ShellViewModel, document.body));
+    </script>
+  </body>
+</html>
